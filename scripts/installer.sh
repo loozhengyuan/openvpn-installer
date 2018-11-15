@@ -159,3 +159,7 @@ echo "You may now access the config file at ~/client-configs/files/$client@$FULL
 sudo systemctl start openvpn@server
 sudo systemctl status openvpn@server
 sudo systemctl enable openvpn@server
+
+echo "Port 1194 has been forwarded by default"
+echo "If you plan to forward other ports, change the firewall settings using UFW"
+echo "Type 'sudo ufw help' for more information"
