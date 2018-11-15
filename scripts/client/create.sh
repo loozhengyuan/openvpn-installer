@@ -23,7 +23,7 @@ sudo cp /etc/openvpn/ca.crt ~/client-configs/keys/
 
 KEY_DIR=~/client-configs/keys
 OUTPUT_DIR=~/client-configs/files
-BASE_CONFIG=~/ovpn-helper/client.conf
+BASE_CONFIG=~/openvpn-installer/conf/client.conf
 FULL_HOSTNAME=$(hostname -f)
 
 touch $OUTPUT_DIR/$client@$FULL_HOSTNAME.ovpn

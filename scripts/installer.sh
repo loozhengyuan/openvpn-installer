@@ -82,8 +82,8 @@ mkdir -p ~/client-configs/keys
 mkdir -p ~/client-configs/files
 chmod -R 700 ~/client-configs
 
-sudo cp ~/ovpn-helper/server.conf /etc/openvpn/
-sudo cp ~/ovpn-helper/client.conf /etc/openvpn/
+sudo cp ~/openvpn-installer/conf/server.conf /etc/openvpn/
+sudo cp ~/openvpn-installer/conf/client.conf /etc/openvpn/
 
 sudo sed -i -e "s/cert server.crt/cert $server.crt/g" /etc/openvpn/server.conf
 sudo sed -i -e "s/key server.key/key $server.key/g" /etc/openvpn/server.conf
@@ -135,7 +135,7 @@ sudo cp /etc/openvpn/ca.crt ~/client-configs/keys/
 
 KEY_DIR=~/client-configs/keys
 OUTPUT_DIR=~/client-configs/files
-BASE_CONFIG=~/ovpn-helper/client.conf
+BASE_CONFIG=~/openvpn-installer/conf/client.conf
 FULL_HOSTNAME=$(hostname -f)
 
 touch $OUTPUT_DIR/$client@$FULL_HOSTNAME.ovpn
